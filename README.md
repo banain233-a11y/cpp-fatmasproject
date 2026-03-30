@@ -1,24 +1,43 @@
 #include <iostream>
-
 using namespace std;
 
 int main() {
-    // عرض العنوان الرئيسي
-    cout << "--- idarat al-a'mal (Business Management) ---" << endl;
-    cout << "---------------------------------------------" << endl;
+    int choice;
 
-    // التعريف
-    cout << "Definition: Organizing and planning company work to achieve success." << endl;
+    // واجهة ترحيبية مرتبة
+    cout << "============================================" << endl;
+    cout << "   BUSINESS MANAGEMENT INFORMATION SYSTEM   " << endl;
+    cout << "============================================" << endl;
+    
+    cout << "Select an option to view details:" << endl;
+    cout << "1. Definition of Management" << endl;
+    cout << "2. Management Departments" << endl;
+    cout << "3. Management Functions" << endl;
+    cout << "4. Exit" << endl;
+    cout << "--------------------------------------------" << endl;
+    cout << "Enter your choice (1-4): ";
+    cin >> choice;
 
-    // الأقسام
-    cout << "\nDepartments:" << endl;
-    cout << "1. Financial Management" << endl;
-    cout << "2. Human Resources (HR)" << endl;
-    cout << "3. Marketing" << endl;
+    cout << "\n--- Result ---" << endl;
 
-    // الوظائف
-    cout << "\nManagement Functions:" << endl;
-    cout << "Planning - Organizing - Directing - Controlling" << endl;
+    // استخدام Switch Case يجعل الكود احترافياً جداً
+    switch(choice) {
+        case 1:
+            cout << "Definition: Organizing and planning company work to achieve success." << endl;
+            break;
+        case 2:
+            cout << "Departments:\n\t- Financial Management\n\t- Human Resources (HR)\n\t- Marketing" << endl;
+            break;
+        case 3:
+            cout << "Functions:\n\tPlanning - Organizing - Directing - Controlling" << endl;
+            break;
+        case 4:
+            cout << "Exiting program... Goodbye!" << endl;
+            break;
+        default:
+            cout << "Invalid choice! Please run the program again." << endl;
+    }
 
+    cout << "--------------------------------------------" << endl;
     return 0;
-}# cpp-fatmasproject
+}
